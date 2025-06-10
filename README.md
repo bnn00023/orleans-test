@@ -13,10 +13,12 @@
   - `GameId`, `Player`, `Board`, `Coordinate`, `Stone`, `WinRule`
   - `GameAggregate` 管理遊戲狀態變化與下棋流程
 
-- **Application Layer**  
+- **Application Layer**
   負責處理用戶指令（Command）與查詢（Query），調用 Domain 並包裝輸出結果。
   - `StartGameCommand`, `PlaceStoneCommand`
   - `GetGameStatusQuery`
+
+欲了解更完整的設計細節，請參考 [docs/Design.md](docs/Design.md)。
 
 - **Infrastructure Layer**  
   提供外部服務實作，例如：
