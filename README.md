@@ -56,38 +56,35 @@
 [GameAggregate (DDD)]
        |
 [GameRepository] ← Snapshot / Event Store / Redis
+```
 
+### 🚀 快速開始
 
+#### 開發環境需求
 
-快速開始
-開發環境需求
-.NET 8 SDK
+- .NET 8 SDK
+- Docker
+- Kubernetes (Minikube 或 K3s)
+- Redis 或 SQL Server
 
-Docker
+#### 啟動方式（開發）
 
-Kubernetes (Minikube 或 K3s)
-
-[Redis / SQL Server]
-
-啟動方式（開發）
-bash
-複製
-編輯
+```bash
 dotnet run --project src/Gomoku.Api
-啟動方式（Kubernetes）
-bash
-複製
-編輯
+```
+
+#### 啟動方式（Kubernetes）
+
+```bash
 kubectl apply -f k8s/orleans-deployment.yaml
 kubectl apply -f k8s/orleans-service.yaml
+```
+
 Orleans Dashboards 與 Prometheus 可支援監控 Actor 狀態。
 
-📦 未來規劃
- 支援多種開局規則與禁手邏輯
+### 📦 未來規劃
 
- 加入觀戰模式（使用 Orleans Streams）
-
- 實作 Event Sourcing 儲存對戰歷史
-
- 部署至 Azure AKS / GCP GKE
-
+- 支援多種開局規則與禁手邏輯
+- 加入觀戰模式（使用 Orleans Streams）
+- 實作 Event Sourcing 儲存對戰歷史
+- 部署至 Azure AKS / GCP GKE
